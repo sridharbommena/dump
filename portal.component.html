@@ -1,0 +1,34 @@
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Portal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Companies</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
+        <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
+            <div *ngFor="let post of posts" class="col">
+                <div class="card h-100 shadow"> <img src="https://mdbootstrap.com/img/new/standard/nature/111.jpg" class="card-img-top" alt="post image">
+                    <div class="card-body">
+                        <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-primary"></span> <span class="float-end price-hp">{{post.date}}</span> </div>
+                        <h5 class="card-title">{{post.heading}}</h5>
+                        <h4 class="card-title">{{post.description}}</h4>
+                        <div class="text-center my-4"> <a href="#" class="btn btn-warning">Apply now</a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
